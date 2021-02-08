@@ -1,13 +1,14 @@
 package com.example.lab3.models
 
 import kotlin.random.Random
+import java.io.Serializable
 
 class Student(
     val name: String,
     val address: String?,
     val yearOfStudy: Int,
     val age: Int?
-) {
+): Serializable {
     companion object {
         private val studentNames = listOf(
             "Mike Jones",
