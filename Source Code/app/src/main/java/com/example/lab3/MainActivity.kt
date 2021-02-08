@@ -11,6 +11,9 @@ import com.example.lab3.models.CourseList
 class MainActivity : AppCompatActivity() {
 
     private val courseList = CourseList.getCourses()
+    
+    // TODO: Update and read from the currentlySelectedCourse variable when necessary
+    private var currentlySelectedCourse: Course? = null
 
     private lateinit var courseBiologyTextView: TextView
     private lateinit var courseMathTextView: TextView
@@ -37,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     // TODO: Configure view students button to show the ViewStudentsActivity when clicked
     private fun configureViewStudentsButton() {
-
+        
     }
 
     private fun configureCourseTextViews() {
