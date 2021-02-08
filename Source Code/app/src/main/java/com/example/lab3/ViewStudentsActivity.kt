@@ -4,20 +4,24 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.annotation.SuppressLint
+import com.example.lab3.models.Student
+import java.io.Serializable
+
 
 class ViewStudentsActivity: AppCompatActivity() {
 
     // TODO: Add instance variables
 
+    @Suppress("unchecked_cast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_students)
 
         // TODO: Hook up UI elements
 
-        // TODO: Get necessary data from intent.extras
-
-        buildStudentsList()
+        // TODO: Get student list and course name data from intent.extras
+        // Hint: getSerializable(yourStudentListKey) as List<Student>
 
         // TODO: Course name as title in navigation bar
         // TODO: Compute the total age of all students in the course and display it in a textView
@@ -32,7 +36,7 @@ class ViewStudentsActivity: AppCompatActivity() {
      * Name: Mike Danes, Year of Study: 4 // student missing a few attributes
      *
      */
-    private fun buildStudentsList() {
+    private fun buildStudentsList(students: List<Student>) {
         // TODO: Build student list and render it in the UI as described in the method comments
     }
 
@@ -44,6 +48,8 @@ class ViewStudentsActivity: AppCompatActivity() {
 //        fun newIntent(students: List<String>, context: Context): Intent {
             // create the required intent
             // include the list of students in the intent extras
+        
+            // Hint: intent.putExtra(yourStudentListKey, students as Serializable)
 //        }
     }
 }
